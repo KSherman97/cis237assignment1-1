@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * Kyle Sherman
+ * CIS 237 - Advanced C# Programming
+ * 1/25/2017
+**/
+
+// standard imports
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +15,14 @@ namespace assignment1
 {
     static class StaticUserInterface
     {
+        // create a new integer called GetUserInput
         public static int GetUserInput()
         {
-            PrintMenu();
+            PrintMenu(); // print the main menu
 
-            string inputString = Console.ReadLine();
+            string inputString = Console.ReadLine(); // get the user input
 
+            // validate the input to make sure it is a valid option
             while (inputString != "1" && inputString != "2" && inputString != "3" && inputString != "4" &&
                 inputString != "5" && inputString != string.Empty && inputString != null)
             {
@@ -22,11 +31,12 @@ namespace assignment1
                 Console.WriteLine("Press any key to continue.");
                 Console.ReadKey();
                 Console.Clear();
-                PrintMenu();
+                PrintMenu(); // redisplay the menu if the user entered invalid input
                 inputString = Console.ReadLine();
             }
             Console.Clear();
 
+            // try-catch statement to parse the string the user entered into an int and return it
             try
             {
                 return Int32.Parse(inputString);                    // parse the input from the user
@@ -40,6 +50,7 @@ namespace assignment1
             }
         }
 
+        // menu method
         private static void PrintMenu()
         {
             Console.WriteLine("1) Load Wine List From CSV");
@@ -49,6 +60,8 @@ namespace assignment1
             Console.WriteLine("5) Exit");
         }
 
+        // prints the entire contents of the wine item array 
+        // alloutput is passed over from the wineItemCollection class
         public static void PrintAllOutput(string allOutput)
         {
             Console.WriteLine(allOutput);

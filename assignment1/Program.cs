@@ -1,11 +1,10 @@
 ﻿/**
  * Kyle Sherman
  * CIS 237 - Advanced C# Programming
- * 1/25/2016
+ * 1/25/2017
 **/
 
 // standard imports
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
