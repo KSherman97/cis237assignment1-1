@@ -1,9 +1,9 @@
-# Assignment 1 - Review of C# Basic Concepts and Introduction to Git
+﻿# Assignment 1 - Review of C# Basic Concepts and Introduction to Git
 
 ## Due 01-25-2017
 
 ## Author
-
+Kyle Sherman
 
 
 ## Description
@@ -84,5 +84,7 @@ Suggestion/Hints:
 | **Total**           | **100**|
 
 ## Outside Resources Used
+None
 
 ## Known Problems, Issues, And/Or Errors in the Program
+No known errors
