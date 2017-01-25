@@ -23,7 +23,7 @@ namespace assignment1
         {
             Console.BufferHeight = Int16.MaxValue - 1;  // resets the console bufferhieght to allow the entire file
                                                         // to be read into a single console window
-            Console.SetWindowSize(120, 30);             // resizes the window to fit the special output formatting
+            Console.SetWindowSize(125, 30);             // resizes the window to fit the special output formatting
 
             bool CSVFileLoaded = false;                 // boolean used to determine if the CSV file has been read or not
 

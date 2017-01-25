@@ -78,7 +78,7 @@ namespace assignment1
                 if (wine != null)                                   // run a check to make sure the spot in the array is not empty
                 {
                     // uses pads to make the output look neater and easier to read
-                    results += "ID: " + wine.WineItemIDString.PadRight(6) + " Description: " + wine.WineItemDescriptionString.PadRight(60) + "  Volume: " + wine.WineItemVolumeString + Environment.NewLine;
+                    results += "ID: " + wine.WineItemIDString.PadRight(6) + " Description: " + wine.WineItemDescriptionString.PadRight(65) + " Volume: " + wine.WineItemVolumeString + Environment.NewLine;
                 }
             }
             StaticUserInterface.PrintAllOutput(results); // call the printAllOutput method from the UI class and pass through the results
