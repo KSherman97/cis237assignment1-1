@@ -84,7 +84,13 @@ Suggestion/Hints:
 | **Total**           | **100**|
 
 ## Outside Resources Used
-None
+[C# Dependency Injection](https://msdn.microsoft.com/en-us/library/hh323705(v=vs.100).aspx)
+
+[Console Window Buffer Limit](http://stackoverflow.com/questions/1370158/console-bufferheight-i-cant-see-scroll-to-see-all-the-console-output-with-con)
+
+[Ideas for an array search algorithm](https://msdn.microsoft.com/en-us/library/aa287730(v=vs.71).aspx)
+
+Gaddis, T. (2008). Starting out with programming logic & design. Boston: Pearson Addison Wesley. Page. 300
 
 ## Known Problems, Issues, And/Or Errors in the Program
 No known errors
