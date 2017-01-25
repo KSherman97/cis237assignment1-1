@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * Kyle Sherman
+ * CIS 237 - Advanced C# Programming
+ * 1/25/2017
+**/
+
+// standard imports
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +15,21 @@ namespace assignment1
 {
     class WineItemCollection
     {
-        WineItem[] _wineItemArray = new WineItem[5000];
+        WineItem[] _wineItemArray = new WineItem[5000]; // creates a new array of type WineItem with 5000 indexes
 
+        // ******************************** 
+        //          Backing Fields         
+        // ********************************
         private string _wineItemID;
         private string _wineItemDescription;
         private string _wineItemVolume;
 
-        public WineItemCollection() { }
+        // ******************************** 
+        //          Constructors                  
+        // ********************************
+        public WineItemCollection() { } // blank constructor
 
+        // 3 parameter constructor that accepts the wineItemID, description, and volume
         public WineItemCollection(string wineItemIDString, string wineItemDescriptionString, string wineItemVolumeString)
         {
             wineItemIDString = _wineItemID;
@@ -23,6 +37,9 @@ namespace assignment1
             wineItemVolumeString = _wineItemVolume;
         }
 
+        // ******************************** 
+        //            Properties                             
+        // ********************************
         public string WineItemIDString
         {
             get { return _wineItemID; }
@@ -41,12 +58,18 @@ namespace assignment1
             set { _wineItemVolume = value; }
         }
 
-
+        // ******************************** 
+        //            Methods                             
+        // ********************************
+        // this method is called to add a new wineItem to the array
         public void addWineItem(int index, string wineItemID, string wineItemDescription, string wineItemVolume)
         {
-            _wineItemArray[index] = new WineItem(wineItemID, wineItemDescription, wineItemVolume);
+            _wineItemArray[index] = new WineItem(wineItemID, wineItemDescription, wineItemVolume); // add a new wineItem object to the array 
+                                                                                                   // at the passed in index
         }
 
+        // this method is used to output the entire array contents
+        // utilizes a foreach loop to continue until a null is found
         public void outputWineItemArray()
         {
             string results = string.Empty;
@@ -54,12 +77,14 @@ namespace assignment1
             {
                 if (wine != null)                                   // run a check to make sure the spot in the array is not empty
                 {
+                    // uses pads to make the output look neater and easier to read
                     results += "ID: " + wine.WineItemIDString.PadRight(6) + " Description: " + wine.WineItemDescriptionString.PadRight(60) + "  Volume: " + wine.WineItemVolumeString + Environment.NewLine;
                 }
             }
-            StaticUserInterface.PrintAllOutput(results);
+            StaticUserInterface.PrintAllOutput(results); // call the printAllOutput method from the UI class and pass through the results
         }
 
+        // this method is used to search for a specific value that is passed in
         public string searchWineItem(string searchValue)
         {
             bool found = false;                                         // create a new "found" boolean and set it to false
