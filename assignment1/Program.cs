@@ -43,7 +43,7 @@ namespace assignment1
                     {
                         Console.Clear();
 
-                        StaticCSVProcessor readFile = new StaticCSVProcessor(); // instantiates the read CSVProcessor class
+                        CSVProcessor readFile = new CSVProcessor(); // instantiates the read CSVProcessor class
                         readFile.ImportCSVFile("../../../datafiles/WineList.CSV", wineItemArrayCollection); // calls the ReadCSV method in the CSV reader class
 
                         Console.WriteLine("File Read Successful.");             // let the user know that the file was read propperly

@@ -7,7 +7,7 @@ using System.IO;
 
 namespace assignment1
 {
-     class StaticCSVProcessor
+     class CSVProcessor
     {
         WineItemCollection addWineItem = new WineItemCollection();
 
